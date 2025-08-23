@@ -1,0 +1,36 @@
+@base_url=http://localhost:8000/api/v1
+
+### Get all campaigns
+GET {{base_url}}/campaigns
+
+###
+
+# Get campaign by id
+GET {{base_url}}/campaigns/2
+
+###
+
+# Create new campaign
+POST {{base_url}}/campaigns
+Content-Type: application/json
+
+{
+  "name": "new campaign",
+  "due_date": "2025-12-25"
+}
+
+###
+
+# Update campaign
+PUT {{base_url}}/campaigns/2
+Content-Type: application/json
+
+{
+  "name": "updated campaign",
+  "due_date": "2026-01-01"
+}
+
+###
+
+# Delete campaign
+DELETE {{base_url}}/campaigns/2
